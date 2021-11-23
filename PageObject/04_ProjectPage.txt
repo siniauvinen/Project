@@ -1,0 +1,75 @@
+**Projects functionality Testsuit Overview**
+
+#******************** Settings ************************
+
+*** Settings ***
+
+Documentation	Project Test scenario. CRUD Operation: Create, Read, Update, Delete
+
+Pre Condition	Open Browser
+				Log In	 
+Post Condition	Close All Browsers
+Tags			Blank Project, Template Project
+
+#******************* Common Variables ********************
+
+*** Variables ***
+
+BlankProject_URL= https://gitlab.com/projects/new#blank_project
+TemplateProject_URL= https://gitlab.com/projects/new#create_from_template
+BlankProjectName = Blank project
+TemplateProjectName = Template project
+TemplateProjectNameNew = Template Project Updated
+ConfirmMessage = sinppa/template-project
+
+
+#******************** Test Cases *************************
+
+*** Test Case ***
+
+# Positive Test
+
+Create blank project
+	Navigate to create blank project page	BlankProject_URL
+	Input project name						BlankProjectName
+	Click on Create project
+	Verify Page Should Contain "Project 'Blank project' was successfully created."
+
+Create template project
+	Navigate to create from template page		TemplateProject_URL
+	Choose template type and Submit Use template
+	Input project name							TemplateProjectName
+	Click on Create project
+	Verify Page Should Contain "The project was successfully imported."
+
+Update name of template project
+	Open existing template project		TemplateProjectName
+	Navigate to General Settings
+	Expand Naming, topics, avatar
+	Input new name of template project	TemplateProjectNameNew
+	Click on Save changes
+	Verify Page Should Contain "Project 'Template Project Updated' was successfully updated."
+
+Delete template project
+	Open existing template project 		TemplateProjectNameNew
+	Navigate to General Settings
+	Expand Advanced
+	Click on Delete project
+	Confirm Page Should Contain "Please type the following to confirm: " + ConfirmMessage
+	Input confirm message				ConfirmMessage
+	Click on Yes, delete project
+	Verify Page should contain "Project 'Sini Auvinen / Template Project Updated' is in the process of being deleted."
+
+
+
+# Negative Test
+
+Create a blank project with the previous same name
+	Navigate to create blank project page	BlankProject_URL
+	Input project name						BlankProjectName
+	Click on Create project
+	Verify Page Should Contain "The form contains the following errors:
+									- Name has already been taken
+									- Path has already been taken"
+
+
