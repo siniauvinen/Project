@@ -37,12 +37,12 @@ Empty=
 
 Register user with valid username and password
 	Navigate to Sign Up page 	Login_URL
-	Input first name			FirstName
-	Input last name				LastName
-	Input username				UserName
-	Input email					Email
-	Input password				UserPassword
-	Tick reCAPTCHA				ReCAPTCHATicked
+	Input first name 	FirstName
+	Input last name 	LastName
+	Input username 	UserName
+	Input email 	Email
+	Input password 	UserPassword
+	Tick reCAPTCHA 	ReCAPTCHATicked
 	Submit Register Form
 	Verfiy Page Should Contain "Almost there please check your email (Email) to confirm your account" page
 
@@ -50,45 +50,45 @@ Register user with valid username and password
 
 Register user with same above username
 	Navigate to Sign Up page 	Login_URL
-	Input first name			FirstName
-	Input last name				LastName
-	Input username				UserName
-	Input email					Email
-	Input password				UserPassword
-	Tick reCAPTCHA				ReCAPTCHATicked
+	Input first name 	FirstName
+	Input last name 	LastName
+	Input username 	UserName
+	Input email 	Email
+	Input password 	UserPassword
+	Tick reCAPTCHA 	ReCAPTCHATicked
 	Submit Register Form
 	Verfiy Page Should Contain "Username has already been taken"
 	
 Register user with empty password
 	Navigate to Sign Up page 	Login_URL
-	Input first name			FirstName
-	Input last name				LastName
-	Input username				UserName
-	Input email					Email
-	Input password 				Empty
-	Tick reCAPTCHA				ReCAPTCHATicked
+	Input first name 	FirstName
+	Input last name 	LastName
+	Input username 	UserName
+	Input email 	Email
+	Input password 	Empty
+	Tick reCAPTCHA 	ReCAPTCHATicked
 	Submit Register Form
 	Verify That Error message should show "Minimum length is 8 characters"
 
 Register user with invalid email
 	Navigate to Sign Up page 	Login_URL
-	Input first name			FirstName
-	Input last name				LastName
-	Input username				UserName
-	Input email					Invalid_Email
-	Input password				UserPassword
-	Tick reCAPTCHA				ReCAPTCHATicked
+	Input first name 	FirstName
+	Input last name 	LastName
+	Input username 	UserName
+	Input email 	Invalid_Email
+	Input password 	UserPassword
+	Tick reCAPTCHA 	ReCAPTCHATicked
 	Submit Register Form
 	Verify That Error message should show "Please provide a valid email address"
 
 
 Register user without recaptcha
 	Navigate to Sign Up page 	Login_URL
-	Input first name			FirstName
-	Input last name				LastName
-	Input username				UserName
-	Input email					Email
-	Input password				UserPassword
-	Untick reCAPTCHA			ReCAPTCHAUnticked
+	Input first name 	FirstName
+	Input last name 	LastName
+	Input username 	UserName
+	Input email 	Email
+	Input password 	UserPassword
+	Untick reCAPTCHA 	ReCAPTCHAUnticked
 	Submit Register Form
 	Verfiy Page Should Contain "There was an error with the reCAPTCHA. Please solve the reCAPTCHA again."

@@ -29,34 +29,34 @@ LastName = Auvinen
 # Positive Test
 
 Create issue
-	Open existing project		BlankProjectName
+	Open existing project 	BlankProjectName
 	Navigate to Issues
 	Click on New Issue
-	Input Issue name			IssueName
+	Input Issue name 	IssueName
 	Click on Create Issue
 	Verify Text Should Contain "Created right now by " + FirstName + LastName
 
 Update name of issue
-	Open existing project		BlankProjectName
+	Open existing project 	BlankProjectName
 	Navigate to Issues
-	Open existing Issue			IssueName
+	Open existing Issue 	IssueName
 	Click on pencil-icon
-	Input new Issue name		IssueNameNew
+	Input new Issue name 	IssueNameNew
 	Click on Save Changes
 	Verify that IssueNameNew stands as a title and Verify Text Should Contain "Edited right now by " + FirstName + LastName
 
 
 Create second issue with privious updated name
-	Open existing project		BlankProjectName
+	Open existing project 	BlankProjectName
 	Navigate to Issues
 	Click on New Issue
-	Input Issue name			IssueNameNew
+	Input Issue name 	IssueNameNew
 	Click on Create Issue
 	Verify Text Should Contain "Created right now by " + FirstName + LastName
 
 
 Delete first issue
-	Open existing project		BlankProjectName
+	Open existing project 	BlankProjectName
 	Navigate to Issues
 	Click on the first Issue
 	Click on pencil-icon
