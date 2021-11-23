@@ -26,9 +26,11 @@ Screenshot of bug and the code causing the bug can be found from Project > Image
 ## Possible fixes
 
 Code now with the bug
-"<h3 class="gl-font-size-h2 gl-reset-color"> Create black project </h3>"
+h3 class="gl-font-size-h2 gl-reset-color"> Create black project /h3
 
 Code should be
-"<h3 class="gl-font-size-h2 gl-reset-color"> Create blank project </h3>"
+h3 class="gl-font-size-h2 gl-reset-color"> Create blank project /h3
+
+
 
       
